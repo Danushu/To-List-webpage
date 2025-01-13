@@ -34,6 +34,14 @@ document.getElementById("addTaskButton").addEventListener("click", () => {
         saveTasks();
         renderTasks();
         taskInput.value = "";
+        taskInput.focus();
+    }
+});
+
+// Handle "Enter" Key for Adding Tasks
+document.getElementById("taskInput").addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+        document.getElementById("addTaskButton").click();
     }
 });
 
